@@ -1,0 +1,96 @@
+<!DOCTYPE html> <!--Tipo de documento-->
+
+<html lang="en"> <!--Liguagem da pagina esta configurada para Ingles-->
+
+<head> <!--Contem as informações de confingurações da pagina que n é exibida para o usuario-->
+    
+    <meta charset="UTF-8"> <!--Cadeia de Caracteres exibe acentos e aceita outras linguagens como Chines-->
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--Configuração de compatibilidade do navegador IE-->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!--Configuração que possibilita o conteudo ser ajustado conforme o dispositivo utilizado no acesso-->
+    
+    <!--CSS BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!--CSS Style-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--FavIcon-->
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+
+    <!--Titulo da pagina na aba do navegador-->
+    <title>Email Creator</title>
+</head> 
+
+
+<body>  
+    
+        <main class="conteudo"> <!--Criei uma tag main com a class conteudo para poder estilazar melhor a pagina-->
+            
+            <div class="container-fluid"> <!--Criei uma div para dividir em blocos para organizar o codigo-->
+                
+                <img src="assets/logo.png" class="rounded" alt="logo da company"> <!--Imagem no topo da pagina como logo-->
+                
+                <div class="campo container-fluid"> <!--Criei outro bloco para formatar o titulo-->
+                    
+                    <h1 id="titulo">Email Creator</h1> <!--Titulo da pagina-->
+                    
+                </div>
+                
+
+                <fieldset class="grupo"> <!--Seria um agrupador de campos junta dois campos em uma caixa-->
+                    
+                    <div class="campo container-fluid"> <!-- Criei essa div para Dividir uma parte do codigo ou seja é uma caixa com infos-->
+                        
+                        <label for="nome"><strong>Full Name</strong></label>  <!--Titulo do Campo-->
+                       
+                        <input type="text" class="nomecompleto" name="nome" id="nome" required> <!--Entrada de valor com alguns atributos  tipo como texto nome como nome e o id como nome-->
+                        
+                    </div>
+                   
+                </fieldset>
+                
+                <br>             
+                <br>       
+                <div class="bottom" container-fluid> <!--Criei uma div para o botão-->
+                    
+                    <button class="btn btn-primary btn-lg" onclick="minhaFuncao()">Criar Email</button> <!--Tag do botão configurada para chamar a minha função em js no arquivo action.js-->
+                    
+                </div>
+
+                <br><br><br><br>              
+            
+                <input type="file" name="inputFile" id="inputFile"> <!--Cria um input do tipo file para receber a lista em formato txt-->
+
+                
+                <pre id="output"></pre><!-- essa tag traz um texto pre formatado-->
+
+                <em> <!--Tag enfase na frase-->
+                    
+                    <p>Select a TXT file to create multiple emails</p> <!--Tag paragrafo para informar o usuario de que ele pode selecionar um arquivo para criar multiplos emails-->
+                    
+                </em>
+                
+                <br><br>
+            </div>    
+
+        </main>
+    <h3 id="ecreated">Emails Created</h3> <!--Titulo da onde ira conter os emaisl criados-->
+    
+    <div class="EmailsCriados container-fluid">
+        <!--Div criada para amarzenar os emails criados-->
+    </div>
+    
+    <!--Chama meu arquivo em js armazenadolocalmente para configuração de algumas tags-->
+    <script src="action.js"></script> 
+
+    <!--chama o script de configuração do bootstrap armazenado no cdn-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script> 
+    
+
+</body>
+</html>
